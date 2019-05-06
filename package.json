@@ -2,7 +2,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest"
   },
   "dependencies": {
     "next": "^8.0.4",
@@ -11,6 +12,11 @@
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.0"
+    "babel-jest": "^24.7.1",
+    "babel-plugin-styled-components": "^1.10.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "jest": "^24.7.1",
+    "react-test-renderer": "^16.8.6"
   }
 }
