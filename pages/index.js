@@ -27,7 +27,7 @@ class HomePage extends Component{
         adults: 1,
         children: 0
       }]
-    }
+    };
     this.componentDidMount = this.componentDidMount.bind(this);
 
     this.handleRoomSelectionToggle = this.handleRoomSelectionToggle.bind(this);
@@ -48,7 +48,7 @@ class HomePage extends Component{
     const roomsLength = newRooms.length;
     const roomIndex = roomNumber - 1;
 
-    for(var i = 0; i <= roomsLength - 1; i++){
+    for(var i = 0; i <= roomsLength - 1; i++) {
       if(checked) {
         if(i <= roomIndex) {
           let newRoom = {...this.state.rooms[i]};
@@ -56,7 +56,7 @@ class HomePage extends Component{
           newRooms[i] = newRoom;
         }
       }
-      else{
+      else {
         if(i >= roomIndex) {
           let newRoom = {...this.state.rooms[i]};
           newRoom.selected = checked;
