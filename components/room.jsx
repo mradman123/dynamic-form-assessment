@@ -18,7 +18,7 @@ const room = props => {
   height: 20px;
   padding: 0px 3px;
   background-color: ${ props => props.selected ? "#e7e7e7" : "#dbdbe3"};
-  font-weight: bold;
+  font-weight: ${ props => props.selected ? "bold" : "normal"};
 `;
 
   const Dropdown = styled.div`
@@ -37,8 +37,8 @@ const room = props => {
 
   return (
     <Container selected={selected}>
-      <Header>
-        <input type="checkbox" name={roomName} checked={props.selected} onChange={event => props.handleRoomSelectionToggle(event.target.checked, props.number)} />
+      <Header selected={selected}>
+        {number != 1 && <input type="checkbox" name={roomName} checked={props.selected} onChange={event => props.handleRoomSelectionToggle(event.target.checked, props.number)} />}
         {roomName}
       </Header>
       <Dropdown>

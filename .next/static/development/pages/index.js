@@ -28,8 +28,10 @@ var room = function room(props) {
   var Header = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
     displayName: "room__Header",
     componentId: "zidzi0-1"
-  })(["height:20px;padding:0px 3px;background-color:", ";font-weight:bold;"], function (props) {
+  })(["height:20px;padding:0px 3px;background-color:", ";font-weight:", ";"], function (props) {
     return props.selected ? "#e7e7e7" : "#dbdbe3";
+  }, function (props) {
+    return props.selected ? "bold" : "normal";
   });
   var Dropdown = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
     displayName: "room__Dropdown",
@@ -50,12 +52,13 @@ var room = function room(props) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Header, {
+    selected: selected,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }, number != 1 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "checkbox",
     name: roomName,
     checked: props.selected,
